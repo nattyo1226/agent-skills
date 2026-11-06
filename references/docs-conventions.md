@@ -93,6 +93,8 @@ Avoid unnecessary language mixing. Preserve established terminology unless chang
 - Be precise, concise, and consistent in terminology, notation, and API names. Do not invent guarantees or unsupported rationale.
 - Prefer prose for explanations; use tables, lists, equations, diagrams, and code only when they improve clarity.
 - Avoid unnecessary background, duplication, excessive fragmentation, and rigid templates that do not suit the document.
+- Avoid documenting incidental details of individual developers' or agents' environments, such as operating systems, Nix devShells, or `direnv exec` workflows.
+- Document environment-specific requirements or procedures only when they are part of the project's supported workflow, necessary for its use, or relevant to reproducibility. Do not infer project requirements from the development environment alone.
 
 ## 7. Review criteria
 
