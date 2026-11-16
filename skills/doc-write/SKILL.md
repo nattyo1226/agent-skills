@@ -1,5 +1,5 @@
 ---
-name: docs-write
+name: doc-write
 description: >
   Create or locally revise project documentation, including development plans,
   following shared documentation structure, responsibility, and writing rules.

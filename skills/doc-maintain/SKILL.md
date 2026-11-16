@@ -1,5 +1,5 @@
 ---
-name: docs-maintain
+name: doc-maintain
 description: >
   Maintain and reorganize existing project documentation, reconcile completed
   development work into authoritative docs, clean up completed plans, or audit
