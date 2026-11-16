@@ -12,7 +12,7 @@ Use this skill for **explicitly requested documentation maintenance**, including
 
 ## Required conventions
 
-Read and apply `references/docs-conventions.md` in this Skill directory. Documentation maintenance must preserve its responsibility boundaries and writing rules. If the reference file is missing, report the installation problem rather than guessing its rules.
+Read and apply `references/documentation/conventions.md` in this Skill directory. Documentation maintenance must preserve its responsibility boundaries and writing rules. If the reference file is missing, report the installation problem rather than guessing its rules.
 
 ## Select the operation
 

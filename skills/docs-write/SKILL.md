@@ -12,7 +12,7 @@ Use this skill for **creating or editing the documents requested by the user**, 
 
 ## Required conventions
 
-Read and apply `references/docs-conventions.md` in this Skill directory before editing. Treat its rules as constraints on the requested work, **not** as instructions to perform general maintenance. If the reference file is missing, report the installation problem rather than guessing its rules.
+Read and apply `references/documentation/conventions.md` in this Skill directory before editing. Treat its rules as constraints on the requested work, **not** as instructions to perform general maintenance. If the reference file is missing, report the installation problem rather than guessing its rules.
 
 ## Workflow
 
