@@ -14,6 +14,10 @@ Evaluate whether an implementation satisfies its intended behavior and whether i
 
 Identify both **demonstrable defects** and **substantiated design concerns**. Do not treat conformity with the existing codebase as proof of design quality, and do not mistake stylistic preferences for defects.
 
+## Shared quality criteria
+
+Before substantive review, read [Code Quality Philosophy](references/code-quality/philosophy.md) and [Code Quality Principles](references/code-quality/principles.md). Use them to assess semantic fidelity, contracts, abstraction boundaries, user-facing simplicity, complexity, and verification. Apply principles as context-dependent judgment criteria, not a mechanical checklist or independent grounds for findings; substantiate consequential trade-offs.
+
 ## Scope and Boundaries
 
 - Determine the review target from the request: a change/diff, component, architecture, or repository.
@@ -29,11 +33,10 @@ Select relevant criteria rather than mechanically auditing every category.
 
 1. **Correctness:** observable behavior, specifications, edge cases, state transitions, and error handling.
 2. **Semantics:** meaning of types and APIs, contracts, invariants, preconditions, postconditions, and domain assumptions.
-3. **Architecture:** responsibility boundaries, abstraction level, component granularity, coupling, and dependency direction.
+3. **Architecture:** responsibility boundaries, expressive core abstractions, user-facing API simplicity, component granularity, coupling, and dependency direction.
 4. **Robustness:** invalid inputs, failure handling, resource lifecycle, concurrency, and recovery where applicable.
 5. **Performance:** significant algorithmic, computational, allocation, memory, or I/O costs; avoid speculative micro-optimization findings.
-6. **Maintainability:** avoidable complexity, duplication, hidden coupling, and the cost of foreseeable changes.
-
+6. **Maintainability:** accidental complexity, duplication of domain knowledge, hidden coupling, and the cost of foreseeable changes.
 For structural findings, explain the concrete mismatch between the implementation and its responsibilities or semantics, and the consequences of that mismatch. Do not recommend additional layers, generic frameworks, or larger refactors merely for aesthetic uniformity.
 
 ## Workflow
@@ -50,11 +53,13 @@ For structural findings, explain the concrete mismatch between the implementatio
 - Identify domain concepts, responsibilities, data and control flow, observable contracts, and invariants.
 - Inspect the implementation and its actual call sites or consumers.
 - Evaluate whether abstractions and boundaries express those concepts coherently; do not assume existing types or module divisions are inherently correct.
+- Distinguish essential domain complexity from accidental complexity; assess whether core abstractions capture genuine generality without burdening common usage.
 - Trace plausible failure paths and distinguish essential constraints from implementation accidents.
 
 ### 3. Investigate Candidate Findings
 
 - Begin with static reading and reasoning from concrete code paths and relevant specifications.
+- Identify properties guaranteed by types or other static checks; focus dynamic verification on remaining behavior, invariants, and uncertainties.
 - Check whether a suspected defect can actually occur under supported inputs or states; account for existing guards, callers, and documented assumptions.
 - For important or uncertain claims that can be tested, use relevant existing tests or a targeted reproduction when the expected value justifies the effort.
 - Prefer an isolated temporary reproduction to altering the repository solely for review. Do not leave generated artifacts behind unless they are required and authorized.
@@ -129,7 +134,7 @@ Omit empty sections when doing so improves clarity, but explicitly state when no
 Before concluding, verify that:
 
 - Each confirmed defect has a supported failure mechanism or contract violation.
-- Each design concern has a concrete rationale and meaningful consequence.
+- Each design concern has a concrete rationale and meaningful consequence, not merely a departure from a principle.
 - Uncertain hypotheses are labeled as such rather than promoted to defects.
 - Findings are within scope, distinct, actionable, and not duplicates.
 - Claims about tests, tools, and inspections reflect what was actually done.

@@ -14,6 +14,10 @@ Design from semantics; implement incrementally when useful.
 
 Before extending existing structures, separate **what the software must mean and guarantee** from **how the current implementation happens to express it**. Treat the present architecture as evidence and a candidate solution, not as a default specification. Neither preserving nor replacing it is inherently preferable.
 
+## Shared design criteria
+
+Before substantive design analysis, read [Code Quality Philosophy](references/code-quality/philosophy.md) and [Code Quality Principles](references/code-quality/principles.md). Use them to evaluate semantic fidelity, contracts, abstractions, interfaces, complexity, and verification throughout this workflow. Apply the relevant principles as judgment criteria, not a mechanical checklist, and explain consequential trade-offs.
+
 ## Scope and working modes
 
 - Follow the user's requested mode: **analysis/design only**, **refactoring**, or **implementation**. An analysis request does not authorize code changes; an implementation request should not stop at a proposal.
@@ -47,7 +51,7 @@ Consider, as relevant:
 - Does each abstraction capture a genuine recurring concept or variation, rather than merely adding indirection?
 - What constraints arise from performance, resource use, concurrency, interoperability, and migration?
 
-Prefer the simplest structure that faithfully expresses the required semantics. Do not equate better design with more layers, traits, generics, files, or indirection. Conversely, do not keep an inadequate abstraction just because it already exists.
+Favor core abstractions that express genuine domain generality while keeping common user-facing operations simple. Evaluate simplicity by the conceptual burden on users and maintainers, not the amount of code or number of layers, traits, generics, files, or indirections. Do not keep an inadequate abstraction merely because it already exists.
 
 ## 3. Compare with the current structure
 
@@ -76,7 +80,7 @@ When implementation is requested:
 
 Check both functional correctness and whether the intended design improvement was achieved:
 
-- Test observable behavior, edge cases, and the relevant invariants; check compatibility where required.
+- Identify guarantees enforced statically; verify remaining behavior, edge cases, and invariants with appropriate tests or other checks. Check compatibility where required.
 - Review responsibility boundaries, meaningful API semantics, coupling, granularity, and avoidable indirection.
 - Verify that incidental properties of the old implementation have not become accidental new requirements.
 - Run checks proportionate to the change and report any validation gaps or material risks.
