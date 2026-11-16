@@ -12,7 +12,7 @@ Use this skill for **explicitly requested documentation maintenance**, including
 
 ## Required conventions
 
-Read and apply `references/documentation/conventions.md` in this Skill directory. Documentation maintenance must preserve its responsibility boundaries and writing rules. If the reference file is missing, report the installation problem rather than guessing its rules.
+Read and apply `references/documentation/conventions.md` in this Skill directory. When writing or revising project technical documentation, or assessing its writing quality, also read and apply `references/documentation/writing.md`. The former governs document scope, ownership, and placement; the latter governs technical precision and reader-oriented communication. Neither expands the requested maintenance scope. If a required reference file is missing, report the installation problem rather than guessing its rules.
 
 ## Select the operation
 
@@ -52,4 +52,4 @@ Do not interpret a closeout request as authorization for repository-wide restruc
 - Read unrelated documents for context when necessary, but do not refactor them incidentally.
 - Report unrelated issues separately.
 - Do not start implementation work merely because a development plan is present.
-- Apply the shared conventions to every document changed.
+- Apply the shared documentation conventions and writing guidelines to every technical document changed.
