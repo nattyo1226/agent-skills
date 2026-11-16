@@ -65,13 +65,15 @@ The task directory's `README.md` should state objectives, scope, stages, progres
 - Place temporary investigation, planning, and progress information in `plans/`.
 - Never present unimplemented or unaccepted behavior as an established fact. When describing current behavior, verify it against the relevant source where feasible.
 
-## 4. Information ownership and links
+## 4. Information ownership, relevance, and links
 
 - Give each authoritative fact one primary home, chosen by document responsibility.
 - Prefer links to canonical definitions over maintaining duplicate statements. Brief summaries are permissible for local comprehension.
 - Add useful **relative links** between permanent documents when they improve navigation or understanding. Links may go in either direction; document responsibilities do not impose a link hierarchy.
 - Documents under `plans/` may link to permanent documentation. **No documents outside `plans/` may link to documents inside `plans/`.**
 - Keep links valid when moving, deleting, or renaming files.
+- Avoid documenting incidental details of individual developers' or agents' environments, such as operating systems, Nix devShells, or `direnv exec` workflows.
+- Document environment-specific requirements or procedures only when they are part of the project's supported workflow, necessary for its use, or relevant to reproducibility. Do not infer project requirements from the development environment alone.
 
 ## 5. Language
 
@@ -83,19 +85,10 @@ Choose the language in this order:
 
 Avoid unnecessary language mixing. Preserve established terminology unless changing it is part of the task.
 
-## 6. Writing quality
+## 6. Writing guidelines
 
-- Structure explanations from **abstract to concrete**, both across the document and within sections.
-- Introduce purpose, scope, and core concepts before details where useful; state responsibilities before interfaces and implementation details.
-- Explain prerequisites before dependent material, and group content into coherent sections with descriptive headings.
-- Distinguish requirements, guarantees, assumptions, design choices, implementation details, and examples.
-- Define mathematical symbols and objects before use; state assumptions, domains, invariants, and conditions under which claims hold.
-- Be precise, concise, and consistent in terminology, notation, and API names. Do not invent guarantees or unsupported rationale.
-- Prefer prose for explanations; use tables, lists, equations, diagrams, and code only when they improve clarity.
-- Avoid unnecessary background, duplication, excessive fragmentation, and rigid templates that do not suit the document.
-- Avoid documenting incidental details of individual developers' or agents' environments, such as operating systems, Nix devShells, or `direnv exec` workflows.
-- Document environment-specific requirements or procedures only when they are part of the project's supported workflow, necessary for its use, or relevant to reproducibility. Do not infer project requirements from the development environment alone.
+For project technical documentation, follow [Technical Writing Guidelines](writing.md) for reader-oriented information flow, cognitive clarity, technical precision, presentation, and contextual references. These guidelines govern how content is communicated; the conventions in this document govern its scope, ownership, and placement.
 
 ## 7. Review criteria
 
-For documents within the requested scope, check that content belongs to the correct owner, reflects the accepted/current project state where applicable, uses appropriate cross-references, and does not contradict relevant authoritative documents. A check is not permission to restructure unrelated documentation.
+For documents within the requested scope, check that content belongs to the correct owner, reflects the accepted/current project state where applicable, uses appropriate cross-references, and does not contradict relevant authoritative documents. Check writing quality against [Technical Writing Guidelines](writing.md). A check is not permission to restructure unrelated documentation.
