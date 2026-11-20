@@ -34,8 +34,8 @@ Do not interpret a closeout request as authorization for repository-wide restruc
    - `design/`: resulting component APIs, contracts, and implementation overview.
    - `decisions/`: consequential choices and rationale that warrant historical preservation.
    - `future-work.md` / `future-work/`: remaining unadopted or deferred proposals.
-4. **Verify consistency.** Ensure the relevant permanent documentation reflects the implemented state, references remain valid, and no permanent document depends on the plan.
-5. **Remove the completed plan.** Delete only the task directory being closed, and only after the necessary durable information has been preserved and completion is established. If completion is uncertain, report the blocker and retain the plan.
+4. **Verify consistency.** Ensure the relevant permanent documentation reflects the implemented state and references remain valid. Check links to the task directory and its contents from documents that will remain, including other plans under `docs/plans/`. Resolve those links within the requested scope before deletion.
+5. **Remove the completed plan.** Delete only the task directory being closed, after confirming completion, preserving the necessary durable information, and resolving incoming links from documents that will remain. If any of these conditions is unmet, report the blocker and retain the plan.
 6. **Report changes and any remaining issues.** Do not copy chronological progress logs into permanent documentation.
 
 ## Reorganization
