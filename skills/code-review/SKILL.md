@@ -37,6 +37,7 @@ Select relevant criteria rather than mechanically auditing every category.
 4. **Robustness:** invalid inputs, failure handling, resource lifecycle, concurrency, and recovery where applicable.
 5. **Performance:** significant algorithmic, computational, allocation, memory, or I/O costs; avoid speculative micro-optimization findings.
 6. **Maintainability:** accidental complexity, duplication of domain knowledge, hidden coupling, and the cost of foreseeable changes.
+
 For structural findings, explain the concrete mismatch between the implementation and its responsibilities or semantics, and the consequences of that mismatch. Do not recommend additional layers, generic frameworks, or larger refactors merely for aesthetic uniformity.
 
 ## Workflow
