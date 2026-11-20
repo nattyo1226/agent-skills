@@ -77,10 +77,10 @@ Use one `docs/plans/<task>/` directory for each task that has a plan. Its `READM
 
 ## 5. Language
 
-Choose the language in this order:
+Use the first applicable rule to choose the document language.
 
-1. Explicit user instruction.
-2. Existing document's language.
+1. The language explicitly requested by the user.
+2. The language of the document being revised.
 3. English.
 
 Avoid unnecessary language mixing. Preserve established terminology unless changing it is part of the task.
