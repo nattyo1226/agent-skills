@@ -55,7 +55,7 @@ Record **ideas, candidate features, deferred improvements, and unadopted proposa
 
 Store **temporary working documents for active multi-stage development tasks**. Create a plan when the task benefits from several stages, especially investigation or design before implementation; do not require one for trivial or straightforward changes.
 
-The task directory's `README.md` should state objectives, scope, stages, progress, and completion criteria. Additional files may hold investigations, design notes, experiments, or review results. Plans are not authoritative specifications.
+Use one `docs/plans/<task>/` directory for each task that has a plan. Its `README.md` is the entry point and should state objectives, scope, stages, progress, and completion criteria. Depending on the amount and nature of the material, you may add files in the same directory for supporting material such as investigations, design notes, experiments, or review results. Plans are not authoritative specifications.
 
 ## 3. Current state, history, and proposals
 
